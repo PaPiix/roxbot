@@ -5,6 +5,8 @@ import requests
 from discord.ext.commands import bot
 
 from Roxbot import checks
+from Roxbot.load_config import embedcolour
+from Roxbot.roxfacts import *
 from Roxbot.settings import guild_settings
 from Roxbot.logging import log
 
@@ -261,6 +263,21 @@ class Fun:
 		embed.set_footer(text="https://frog.tips")
 		return await ctx.send(embed=embed)
 
+	@bot.command()
+	async def roxbotfact(self, ctx):
+		fact_index = random.randrange(0, len(roxfacts))
+		fact = roxfacts[fact_index]
+		if fact[1] in roxcontributors:
+			author = self.bot.get_user(roxcontributors[fact[1]])
+		else:
+			author = fact[1]
+		if author is None: # Just incase roxbot doesnt share a server with the author of the fact.
+			author = fact[1]
+
+		embed = discord.Embed(title="Roxbot Fact #{}!".format(fact_index+1), description=fact[0], colour=embedcolour)
+		embed.set_footer(text="Credit: {}".format(author))
+
+		return await ctx.send(embed=embed)
 
 def setup(bot_client):
 	bot_client.add_cog(Fun(bot_client))
