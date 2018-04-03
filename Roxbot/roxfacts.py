@@ -39,10 +39,12 @@ roxfacts = [
 	["Roxbot doesn’t have a degree yet despite knowing enough to claim 4 different doctorates, but would one day love to go to university for the social experience.", "summer"],
 	["Roxbot can be very impressionable and sometimes will do things to fit in. She will even repeat the same old in-jokes anytime you come close to referencing them. Even if the jokes dead. We still love her though.", "roxie"],
 	["Roxbot’s favourite holiday is Easter. This is because she is also very accustomed to coming back from the dead.", "roxie"],
+	["Roxbot is frustrated with her inability to defeat all the Mario games. She has 100 percented Super Mario World and Super Mario 3D Land, but she lacks the computing skills to figure out the game franchise's open-world counterparts.", "elise"],
 ]
 
 roxcontributors = {
 	"summer": 256651443073712138,
 	"roxie": 142735312626515979,
-	"sid": 267043966216568834
+	"sid": 267043966216568834,
+	"elise": 393999904034390017
 }
